@@ -1,85 +1,93 @@
 body {
   font-family: Arial, sans-serif;
+  margin: 0;
   background: #111;
   color: #fff;
-  margin: 0;
-  padding: 20px;
+  text-align: center;
 }
 
 header {
-  text-align: center;
-}
-
-.wod-list {
-  display: grid;
-  gap: 15px;
-  margin: 20px 0;
-}
-
-.card {
+  padding: 20px;
   background: #1c1c1c;
-  padding: 15px;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: 0.3s;
 }
 
-.card:hover {
-  background: #333;
+.wods {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  padding: 20px;
 }
 
-.timer-section {
-  text-align: center;
-  margin-top: 30px;
-}
-
-.progress-container {
-  width: 100%;
-  background: #333;
-  height: 20px;
-  border-radius: 10px;
-  overflow: hidden;
-  margin: 10px 0;
-}
-
-.progress-bar {
-  height: 100%;
-  width: 0%;
-  background: limegreen;
-  transition: width 1s linear;
-}
-
-button {
-  padding: 10px 15px;
-  margin: 5px;
+.wod-card {
+  padding: 15px 25px;
   border: none;
+  border-radius: 8px;
+  background: #ff6b00;
+  color: #fff;
+  font-size: 16px;
   cursor: pointer;
-  border-radius: 5px;
 }
 
-button:hover {
-  opacity: 0.8;
+.wod-card:hover {
+  background: #ff8c42;
+}
+
+.history {
+  padding: 20px;
+  background: #1c1c1c;
 }
 
 .modal {
   display: none;
   position: fixed;
+  inset: 0;
   background: rgba(0,0,0,0.8);
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  justify-content: center;
+  align-items: center;
 }
 
 .modal-content {
   background: #222;
   padding: 20px;
-  margin: 15% auto;
-  width: 50%;
-  border-radius: 8px;
+  width: 90%;
+  max-width: 600px;
+  border-radius: 10px;
 }
 
 .close {
   float: right;
   cursor: pointer;
-  }
+}
+
+.progress-container {
+  width: 100%;
+  height: 10px;
+  background: #444;
+  margin: 10px 0;
+  border-radius: 5px;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0%;
+  background: #00c853;
+  border-radius: 5px;
+}
+
+.controls button {
+  margin: 5px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.controls button:nth-child(1) { background: #00c853; }
+.controls button:nth-child(2) { background: #ffc107; }
+.controls button:nth-child(3) { background: #d50000; }
+
+.exercise-nav button {
+  margin: 10px;
+  padding: 5px 10px;
+}
