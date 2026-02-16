@@ -2,30 +2,22 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <title>WOD Trainer</title>
+  <title>Go Home • Go Park</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
-  <h1>WOD Trainer</h1>
-  <p>30 minutos: 5' Aquecimento + 20' WOD + 5' Descompressão</p>
+  <h1>Programa 30'</h1>
+  <p>5' Aquecimento • 20' WOD • 5' Descompressão</p>
 </header>
 
-<section class="wod-list" id="wodList"></section>
-
-<section class="timer-section">
-  <h2 id="phaseTitle">Pronto para iniciar</h2>
-  <div class="progress-container">
-    <div class="progress-bar" id="progressBar"></div>
-  </div>
-  <h1 id="timer">00:00</h1>
-
-  <div class="controls">
-    <button onclick="startWorkout()">Iniciar</button>
-    <button onclick="pauseWorkout()">Pausar</button>
-    <button onclick="resetWorkout()">Resetar</button>
-  </div>
+<section class="wods">
+  <button class="wod-card" onclick="openWorkout(0)">Runner's Strength</button>
+  <button class="wod-card" onclick="openWorkout(1)">Upper Body Focus</button>
+  <button class="wod-card" onclick="openWorkout(2)">Core & Balance</button>
+  <button class="wod-card" onclick="openWorkout(3)">The Pyramid</button>
+  <button class="wod-card" onclick="openWorkout(4)">Agility & Speed</button>
 </section>
 
 <section class="history">
@@ -34,14 +26,38 @@
 </section>
 
 <!-- Modal -->
-<div id="exerciseModal" class="modal">
+<div class="modal" id="workoutModal">
   <div class="modal-content">
-    <span onclick="closeModal()" class="close">&times;</span>
-    <h2 id="modalTitle"></h2>
-    <p id="modalDescription"></p>
+    <span class="close" onclick="closeModal()">&times;</span>
+    <h2 id="workoutTitle"></h2>
+
+    <div class="exercise-display">
+      <h3 id="exerciseName"></h3>
+      <p id="exerciseDesc"></p>
+    </div>
+
+    <div class="exercise-nav">
+      <button onclick="prevExercise()">◀</button>
+      <button onclick="nextExercise()">▶</button>
+    </div>
+
+    <div class="timer-section">
+      <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+      </div>
+      <h3 id="phaseLabel">Aquecimento</h3>
+      <h1 id="timer">05:00</h1>
+
+      <div class="controls">
+        <button onclick="startTimer()">Start</button>
+        <button onclick="pauseTimer()">Pause</button>
+        <button onclick="stopTimer()">Stop</button>
+      </div>
+    </div>
+
   </div>
 </div>
 
-<script src="app.js"></script>
+<script src="script.js"></script>
 </body>
-                                                        </html>
+</html>
