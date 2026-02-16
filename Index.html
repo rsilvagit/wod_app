@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>WOD Trainer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>WOD Trainer</h1>
+  <p>30 minutos: 5' Aquecimento + 20' WOD + 5' Descompressão</p>
+</header>
+
+<section class="wod-list" id="wodList"></section>
+
+<section class="timer-section">
+  <h2 id="phaseTitle">Pronto para iniciar</h2>
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+  <h1 id="timer">00:00</h1>
+
+  <div class="controls">
+    <button onclick="startWorkout()">Iniciar</button>
+    <button onclick="pauseWorkout()">Pausar</button>
+    <button onclick="resetWorkout()">Resetar</button>
+  </div>
+</section>
+
+<section class="history">
+  <h2>Histórico</h2>
+  <ul id="historyList"></ul>
+</section>
+
+<!-- Modal -->
+<div id="exerciseModal" class="modal">
+  <div class="modal-content">
+    <span onclick="closeModal()" class="close">&times;</span>
+    <h2 id="modalTitle"></h2>
+    <p id="modalDescription"></p>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+                                                        </html>
