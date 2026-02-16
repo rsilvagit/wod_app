@@ -1,0 +1,85 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #111;
+  color: #fff;
+  margin: 0;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+}
+
+.wod-list {
+  display: grid;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.card {
+  background: #1c1c1c;
+  padding: 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.card:hover {
+  background: #333;
+}
+
+.timer-section {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.progress-container {
+  width: 100%;
+  background: #333;
+  height: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 10px 0;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0%;
+  background: limegreen;
+  transition: width 1s linear;
+}
+
+button {
+  padding: 10px 15px;
+  margin: 5px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  background: rgba(0,0,0,0.8);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.modal-content {
+  background: #222;
+  padding: 20px;
+  margin: 15% auto;
+  width: 50%;
+  border-radius: 8px;
+}
+
+.close {
+  float: right;
+  cursor: pointer;
+  }
